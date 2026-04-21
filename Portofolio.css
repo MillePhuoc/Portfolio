@@ -1,18 +1,14 @@
 :root {
   /* Couleur du texte */
-  --color-text: black;
-
+  --color-text: #f9f9f9;
+  --color-text-alt: #e5efef;
   /* Couleur du texte inverse*/
   --color-text-inverse: white;
 
   /* Couleur du fond */
-  --color-bg: white;
+  --color-bg: #558da0;
+  --color-bg-alt: #96c2c2;
 
-  /* Couleur du fond alt */
-  --color-bg-alt: #e7dfd3;
-
-  --bleu: #044389;
-  --vert: #13aabe;
 }
 
 html,
@@ -26,10 +22,11 @@ body {
 
   font-size: 18px;
 }
+
 h2 {
   margin-bottom: 32px;
   font-size: 32px;
-  color: var(--vert);
+  color: var(--color-text-alt);
 }
 nav {
   display: flex;
@@ -41,9 +38,10 @@ nav {
   justify-content: space-between;
   font-size: 24px;
   position: fixed;
+  color: var(--color-text-alt);
 
-  box-shadow: 0 -10px 40px var(--vert);
-  background-color: var(--color-bg-alt);
+  box-shadow: 0 -10px 40px var(--color-bg-alt);
+  background-color: var(--color-bg);
 
   z-index: 100;
 
@@ -69,9 +67,10 @@ nav>p {
   padding: 14px 28px;
   border-radius: 14px;
 
-  background-color: var(--vert);
+  background-image: linear-gradient(to right, #0171ff, #5c47ff 100%, #42ccff);
   text-decoration: none;
   transition: transform 0.4s;
+  color: var(--color-bg);
 
 }
 
@@ -81,7 +80,8 @@ span {
 
 .btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px var(--vert);
+  box-shadow: 0 6px 16px -4px #006aff66;
+  background-image: linear-gradient(to right, #0171ff, #5c47ff 0%, #42ccff);
 }
 
 .btn:active {
@@ -114,7 +114,7 @@ span {
   height: 35vh;
   perspective: 1000px;
   z-index: 1;
-  color: black;
+  color: var(--color-text);
   font-size: 100%;
 }
 
@@ -123,14 +123,13 @@ span {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 1s ease 0.02s;
+  transition: transform 0.8s ease-in-out 0.02s, border-color 2s ease, box-shadow 0.3s ease;
   transform-style: preserve-3d;
-
 }
 
 .card:hover .card-inter {
   transform: rotateY(180deg) translateY(-8px) scale(1.02);
-  box-shadow: 0 0 40px var(--vert);
+  box-shadow: 0 0 10px var(--color-text-alt);
   border-radius: 16px;
 }
 
@@ -146,14 +145,11 @@ span {
 }
 
 .card-front {
-  background-color: var(--color-bg-alt);
-  border: -10px solid #044289ad;
-
+  background: radial-gradient(farthest-corner at 40px 40px, #cee2ff 20%, #956bff 100%);
 }
 
 .card-back {
-  background-color: var(--vert);
-  border: -10px solid var(--vert);
+  background-color: var(--color-bg-alt);
   transform: rotateY(180deg);
 
   display: flex;
@@ -208,13 +204,14 @@ span {
   width: 30%;
   margin-bottom: 25px;
   padding: 10px;
-  background-color: lightblue;
+  background-image: linear-gradient(to right, #0171ff, #5c47ff 100%, #42ccff);
   border-style: none;
   border-radius: 12px;
+  color: var(--color-bg);
 }
 
 .myBtn:hover {
-  background-color: var(--bleu);
+background-image: linear-gradient(to right, #0171ff, #5c47ff 0%, #42ccff);
 }
 
 
@@ -233,7 +230,7 @@ span {
   margin-left: 20px;
   padding: 32px;
   border-radius: 16px;
-  background-color: var(--color-bg-alt);
+  background: radial-gradient(farthest-corner at 150px 150px, #cee2ff 50%, #956bff 100%);
   box-shadow: 0 0 40px var(--vert);
 }
 
