@@ -20,7 +20,26 @@
     </nav>
 
     <section id="presentation">
-        <h2>Presentation</h2>
+        <h2>Présentation</h2>
+
+        <div class="presentation-container">
+
+            <img src="pp.png" class="pp" alt="ma tête">
+
+            <div class="presentation-text">
+                <h1>Minh Phuoc DAO</h1>
+                <span>Étudiant en informatique à l'UGA</span>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aliquam sit amet dictum mauris, eu hendrerit augue.
+                    Phasellus fermentum est pulvinar turpis auctor dapibus.
+                    Donec auctor, ligula sit amet interdum interdum, velit dolor accumsan odio,
+                    eu viverra dui nunc non ligula.
+                </p>
+            </div>
+
+        </div>
 
 
     </section>
@@ -30,19 +49,10 @@
         <section class="tab">
             <section class="projet">
                 <div class="card">
-                    <div class="card-inter">
-                        <div class="card-front">
-
-                            <h3>Chat Bot</h3>
-
-                        </div>
-                        <div class="card-back">
-
-                            <p> C'est fait avec du java</p>
-
-                            <button class="myBtn">En savoir plus</button>
-
-                        </div>
+                    <h3>Chat Bot</h3>
+                    <p>Réalisation d'un agent conversationnel</p>
+                    <div class="logo">
+                        <img src="Java_Logo.svg" alt="">
                     </div>
                 </div>
                 <div class="myModal modal">
@@ -57,19 +67,10 @@
 
             <section class="projet">
                 <div class="card">
-                    <div class="card-inter">
-                        <div class="card-front">
-
-                            <h3>Faerun</h3>
-
-                        </div>
-                        <div class="card-back">
-
-                            <p> C'est fait avec du java</p>
-
-                            <button class="myBtn">En savoir plus</button>
-
-                        </div>
+                    <h3>Faerun</h3>
+                    <p>Réalisation d'un jeu tour par tour</p>
+                    <div class="logo">
+                        <img src="Java_Logo.svg" alt="">
                     </div>
                 </div>
                 <div class="myModal modal">
@@ -84,19 +85,10 @@
 
             <section class="projet">
                 <div class="card">
-                    <div class="card-inter">
-                        <div class="card-front">
-
-                            <h3>Nutriscore</h3>
-
-                        </div>
-                        <div class="card-back">
-
-                            <p> C'est fait avec du java</p>
-
-                            <button class="myBtn">En savoir plus</button>
-
-                        </div>
+                    <h3>Open Food Facts</h3>
+                    <p>Réalisation d'une analyse poussé sur le nutriscor avec une basse de donné</p>
+                    <div class="logo">
+                        <img src="Sql_logo.png" alt="">
                     </div>
                 </div>
                 <div class="myModal modal">
@@ -111,19 +103,11 @@
 
             <section class="projet">
                 <div class="card">
-                    <div class="card-inter">
-                        <div class="card-front">
-
-                            <h3>CGI</h3>
-
-                        </div>
-                        <div class="card-back">
-
-                            <p> C'est fait avec du java</p>
-
-                            <button class="myBtn">En savoir plus</button>
-
-                        </div>
+                    <h3>CGI</h3>
+                    <p>Réalisation d'un site web pour une entreprise</p>
+                    <div class="logo">
+                        <img src="Html_Logo.png" alt="">
+                        <img class="logocss" src="Css_Logo.png" alt="">
                     </div>
                 </div>
                 <div class="myModal modal">
@@ -138,19 +122,11 @@
 
             <section class="projet">
                 <div class="card">
-                    <div class="card-inter">
-                        <div class="card-front">
-
-                            <h3>Installation debian</h3>
-
-                        </div>
-                        <div class="card-back">
-
-                            <p> C'est fait avec du java</p>
-
-                            <button class="myBtn">En savoir plus</button>
-
-                        </div>
+                    <h3>OS Debian</h3>
+                    <p>Réalisation d'un guide complet pour l'installation d'un Système d'exploitation Debian sur une
+                        machine virtuelle</p>
+                    <div class="logo">
+                        <img src="Debian_Logo.png" alt="">
                     </div>
                 </div>
                 <div class="myModal modal">
@@ -165,19 +141,29 @@
 
             <section class="projet">
                 <div class="card">
-                    <div class="card-inter">
-                        <div class="card-front">
+                    <h3>Serveur Debian</h3>
+                    <p>Réalisation d'un guide complet pour l'installation d'un serveur Debian sur une machine virtuelle
+                        avec Postgresql, Apache 2 et Php d'integré</p>
+                    <div class="logo">
+                        <img src="Debian_Logo.png" alt="">
+                    </div>
+                </div>
+                <div class="myModal modal">
+                    <div class="modal-content">
 
-                            <h3>Casse tete</h3>
+                        <span class="close">&times;</span>
+                        <p>Some text fsefzfl..</p>
 
-                        </div>
-                        <div class="card-back">
+                    </div>
+                </div>
+            </section>
 
-                            <p> C'est fait avec du python</p>
-
-                            <button class="myBtn">En savoir plus</button>
-
-                        </div>
+            <section class="projet">
+                <div class="card">
+                    <h3>Réseaux de Neuronnes</h3>
+                    <p>Réalisation d'un réseaux de neuronnes</p>
+                    <div class="logo">
+                        <img src="Java_Logo.svg" alt="">
                     </div>
                 </div>
                 <div class="myModal modal">
@@ -193,13 +179,14 @@
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                const buttons = document.querySelectorAll(".myBtn");
+                const cards = document.querySelectorAll(".card");
 
-                buttons.forEach(btn => {
-                    const modal = btn.closest('.projet').querySelector('.modal');
+                cards.forEach(card => {
+                    const modal = card.closest('.projet').querySelector('.modal');
                     const close = modal.querySelector(".close");
 
-                    btn.onclick = function () {
+                    card.onclick = function (e) {
+                        e.stopPropagation();
                         modal.style.display = "block";
                     }
 
@@ -216,7 +203,7 @@
             });
         </script>
 
-        
+
 
     </section>
 
